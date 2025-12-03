@@ -53,7 +53,6 @@ export default function RegistrationForm({ onSubmit }: RegistrationFormProps) {
       if (onSubmit) {
         await onSubmit(data);
       } else {
-        // todo: remove mock functionality
         await new Promise((resolve) => setTimeout(resolve, 1500));
         console.log("Form submitted:", data);
       }
@@ -68,26 +67,26 @@ export default function RegistrationForm({ onSubmit }: RegistrationFormProps) {
   };
 
   return (
-    <section id="kayit" className="py-20 bg-background">
+    <section id="kayit" className="py-20 bg-secondary/30">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4" data-testid="text-form-title">
+          <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-4" data-testid="text-form-title">
             Üye Ol
           </h2>
           <div className="w-20 h-1 bg-accent mx-auto rounded-full" />
           <p className="mt-4 text-muted-foreground max-w-2xl mx-auto">
-            Derneğimize üye olmak için aşağıdaki formu doldurun
+            Buca Lions Club ailesine katılmak için başvuru formunu doldurun
           </p>
         </div>
 
-        <Card className="max-w-2xl mx-auto">
+        <Card className="max-w-2xl mx-auto border-2 border-primary/20">
           <CardHeader>
             <div className="flex items-center gap-3">
               <div className="flex h-10 w-10 items-center justify-center rounded-md bg-accent">
                 <UserPlus className="h-5 w-5 text-accent-foreground" />
               </div>
               <div>
-                <CardTitle>Üyelik Başvurusu</CardTitle>
+                <CardTitle className="text-primary">Üyelik Başvurusu</CardTitle>
                 <CardDescription>Bilgilerinizi eksiksiz doldurun</CardDescription>
               </div>
             </div>
@@ -192,7 +191,7 @@ export default function RegistrationForm({ onSubmit }: RegistrationFormProps) {
                         <FormLabel>Kendinizi Tanıtın</FormLabel>
                         <FormControl>
                           <Textarea
-                            placeholder="Kısaca kendinizden, ilgi alanlarınızdan ve neden derneğimize katılmak istediğinizden bahsedin..."
+                            placeholder="Kısaca kendinizden, mesleğinizden ve neden Lions Club'a katılmak istediğinizden bahsedin..."
                             className="min-h-[120px] resize-none"
                             {...field}
                             data-testid="input-introduction"
@@ -224,7 +223,7 @@ export default function RegistrationForm({ onSubmit }: RegistrationFormProps) {
 
                   <Button
                     type="submit"
-                    className="w-full bg-accent text-accent-foreground border border-accent-border hover:bg-accent/90"
+                    className="w-full bg-accent text-accent-foreground border-2 border-accent hover:bg-accent/90 font-semibold"
                     disabled={isSubmitting}
                     data-testid="button-submit-form"
                   >

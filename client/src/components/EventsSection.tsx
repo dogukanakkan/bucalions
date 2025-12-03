@@ -15,31 +15,30 @@ interface EventsSectionProps {
   events?: Event[];
 }
 
-// todo: remove mock functionality
 const defaultEvents: Event[] = [
   {
     id: "1",
-    title: "Yıllık Genel Kurul Toplantısı",
-    description: "2024 yılı faaliyetlerinin değerlendirileceği ve yeni dönem hedeflerinin belirleneceği genel kurul toplantımız.",
-    date: "2024-03-15",
-    time: "14:00",
-    location: "Merkez Toplantı Salonu",
+    title: "Ücretsiz Göz Taraması Kampanyası",
+    description: "Lions Clubs International'ın küresel görme programı kapsamında Buca halkına ücretsiz göz taraması hizmeti sunulacaktır.",
+    date: "2024-03-20",
+    time: "10:00",
+    location: "Buca Belediyesi Kültür Merkezi",
   },
   {
     id: "2",
-    title: "Gönüllü Eğitim Programı",
-    description: "Yeni gönüllülerimiz için temel eğitim ve oryantasyon programı. Dernek kültürü ve projeleri hakkında bilgilendirme yapılacaktır.",
-    date: "2024-03-22",
-    time: "10:00",
-    location: "Eğitim Merkezi",
+    title: "Diyabet Farkındalık Semineri",
+    description: "Diyabet hastalığı hakkında bilinçlendirme ve erken tanı önemi konusunda uzman doktorlarımızla seminer düzenlenecektir.",
+    date: "2024-03-28",
+    time: "14:00",
+    location: "Lions Toplantı Salonu",
   },
   {
     id: "3",
-    title: "Bahar Festivali",
-    description: "Toplumun bir araya geldiği, el işi ürünleri sergisi, yerel sanatçı performansları ve çocuk aktivitelerinin olduğu bahar festivali.",
-    date: "2024-04-05",
-    time: "11:00",
-    location: "Şehir Parkı",
+    title: "Gençlik Liderlik Kampı",
+    description: "Leo Club üyelerimiz ve gençlere yönelik liderlik becerileri geliştirme kampı. Takım çalışması, iletişim ve proje yönetimi eğitimleri verilecektir.",
+    date: "2024-04-15",
+    time: "09:00",
+    location: "Buca Gençlik Merkezi",
   },
 ];
 
@@ -61,15 +60,15 @@ export default function EventsSection({ events = defaultEvents }: EventsSectionP
   };
 
   return (
-    <section id="etkinlikler" className="py-20 bg-secondary/30">
+    <section id="etkinlikler" className="py-20 bg-background">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4" data-testid="text-events-title">
+          <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-4" data-testid="text-events-title">
             Etkinlikler
           </h2>
           <div className="w-20 h-1 bg-accent mx-auto rounded-full" />
           <p className="mt-4 text-muted-foreground max-w-2xl mx-auto">
-            Yaklaşan etkinliklerimizi keşfedin ve katılın
+            Yaklaşan etkinliklerimize katılın, topluma birlikte hizmet edelim
           </p>
         </div>
 
@@ -79,7 +78,7 @@ export default function EventsSection({ events = defaultEvents }: EventsSectionP
             return (
               <Card
                 key={event.id}
-                className="overflow-hidden hover-elevate transition-all duration-200"
+                className="overflow-hidden hover-elevate transition-all duration-200 border-t-4 border-t-accent"
                 data-testid={`card-event-${event.id}`}
               >
                 <CardHeader className="pb-3">
@@ -101,18 +100,18 @@ export default function EventsSection({ events = defaultEvents }: EventsSectionP
                   </p>
                   <div className="flex flex-col gap-2 text-sm">
                     <div className="flex items-center gap-2 text-muted-foreground">
-                      <Calendar className="h-4 w-4 shrink-0" />
+                      <Calendar className="h-4 w-4 shrink-0 text-primary" />
                       <span>{formatDate(event.date)}</span>
                     </div>
                     {event.time && (
                       <div className="flex items-center gap-2 text-muted-foreground">
-                        <Clock className="h-4 w-4 shrink-0" />
+                        <Clock className="h-4 w-4 shrink-0 text-primary" />
                         <span>{event.time}</span>
                       </div>
                     )}
                     {event.location && (
                       <div className="flex items-center gap-2 text-muted-foreground">
-                        <MapPin className="h-4 w-4 shrink-0" />
+                        <MapPin className="h-4 w-4 shrink-0 text-accent" />
                         <span>{event.location}</span>
                       </div>
                     )}

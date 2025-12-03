@@ -1,4 +1,5 @@
-import { Heart, Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin } from "lucide-react";
+import logoImage from "@assets/ChatGPT_Image_3_Ara_2025_14_06_59_1764760641716.png";
 
 interface FooterProps {
   organizationName?: string;
@@ -8,23 +9,30 @@ interface FooterProps {
 }
 
 export default function Footer({
-  organizationName = "Sivil Toplum Kuruluşu",
-  email = "iletisim@stk.org",
-  phone = "+90 212 XXX XX XX",
-  address = "İstanbul, Türkiye",
+  organizationName = "Buca Lions Club",
+  email = "info@bucalions.org",
+  phone = "+90 232 XXX XX XX",
+  address = "Buca, İzmir, Türkiye",
 }: FooterProps) {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-sidebar text-sidebar-foreground">
+    <footer className="bg-primary text-primary-foreground">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid md:grid-cols-3 gap-8">
           <div>
-            <h3 className="text-lg font-semibold mb-4" data-testid="text-footer-org-name">
-              {organizationName}
-            </h3>
-            <p className="text-sidebar-foreground/70 text-sm leading-relaxed">
-              Toplumsal dayanışmayı güçlendirmek ve sürdürülebilir bir gelecek inşa etmek için çalışıyoruz.
+            <div className="flex items-center gap-3 mb-4">
+              <img 
+                src={logoImage} 
+                alt="Buca Lions Club Logo" 
+                className="h-10 w-10 object-contain"
+              />
+              <h3 className="text-lg font-semibold" data-testid="text-footer-org-name">
+                {organizationName}
+              </h3>
+            </div>
+            <p className="text-primary-foreground/80 text-sm leading-relaxed">
+              Lions Clubs International ailesinin bir parçası olarak topluma hizmet etmekten gurur duyuyoruz. We Serve!
             </p>
           </div>
 
@@ -32,22 +40,27 @@ export default function Footer({
             <h3 className="text-lg font-semibold mb-4">Hızlı Erişim</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="#hakkimizda" className="text-sidebar-foreground/70 hover:text-sidebar-foreground transition-colors" data-testid="link-footer-about">
+                <a href="#hakkimizda" className="text-primary-foreground/80 hover:text-accent transition-colors" data-testid="link-footer-about">
                   Hakkımızda
                 </a>
               </li>
               <li>
-                <a href="#uyeler" className="text-sidebar-foreground/70 hover:text-sidebar-foreground transition-colors" data-testid="link-footer-members">
+                <a href="#makaleler" className="text-primary-foreground/80 hover:text-accent transition-colors" data-testid="link-footer-articles">
+                  Makaleler
+                </a>
+              </li>
+              <li>
+                <a href="#uyeler" className="text-primary-foreground/80 hover:text-accent transition-colors" data-testid="link-footer-members">
                   Üyeler
                 </a>
               </li>
               <li>
-                <a href="#etkinlikler" className="text-sidebar-foreground/70 hover:text-sidebar-foreground transition-colors" data-testid="link-footer-events">
+                <a href="#etkinlikler" className="text-primary-foreground/80 hover:text-accent transition-colors" data-testid="link-footer-events">
                   Etkinlikler
                 </a>
               </li>
               <li>
-                <a href="#kayit" className="text-sidebar-foreground/70 hover:text-sidebar-foreground transition-colors" data-testid="link-footer-join">
+                <a href="#kayit" className="text-primary-foreground/80 hover:text-accent transition-colors" data-testid="link-footer-join">
                   Üye Ol
                 </a>
               </li>
@@ -57,30 +70,29 @@ export default function Footer({
           <div>
             <h3 className="text-lg font-semibold mb-4">İletişim</h3>
             <ul className="space-y-3 text-sm">
-              <li className="flex items-center gap-2 text-sidebar-foreground/70">
-                <Mail className="h-4 w-4 shrink-0" />
-                <a href={`mailto:${email}`} className="hover:text-sidebar-foreground transition-colors" data-testid="link-footer-email">
+              <li className="flex items-center gap-2 text-primary-foreground/80">
+                <Mail className="h-4 w-4 shrink-0 text-accent" />
+                <a href={`mailto:${email}`} className="hover:text-accent transition-colors" data-testid="link-footer-email">
                   {email}
                 </a>
               </li>
-              <li className="flex items-center gap-2 text-sidebar-foreground/70">
-                <Phone className="h-4 w-4 shrink-0" />
-                <a href={`tel:${phone.replace(/\s/g, "")}`} className="hover:text-sidebar-foreground transition-colors" data-testid="link-footer-phone">
+              <li className="flex items-center gap-2 text-primary-foreground/80">
+                <Phone className="h-4 w-4 shrink-0 text-accent" />
+                <a href={`tel:${phone.replace(/\s/g, "")}`} className="hover:text-accent transition-colors" data-testid="link-footer-phone">
                   {phone}
                 </a>
               </li>
-              <li className="flex items-center gap-2 text-sidebar-foreground/70">
-                <MapPin className="h-4 w-4 shrink-0" />
+              <li className="flex items-center gap-2 text-primary-foreground/80">
+                <MapPin className="h-4 w-4 shrink-0 text-accent" />
                 <span data-testid="text-footer-address">{address}</span>
               </li>
             </ul>
           </div>
         </div>
 
-        <div className="mt-10 pt-8 border-t border-sidebar-border text-center">
-          <p className="text-sm text-sidebar-foreground/60 flex items-center justify-center gap-1">
+        <div className="mt-10 pt-8 border-t border-primary-foreground/20 text-center">
+          <p className="text-sm text-primary-foreground/60">
             &copy; {currentYear} {organizationName}. Tüm hakları saklıdır.
-            <Heart className="h-3 w-3 text-accent inline" />
           </p>
         </div>
       </div>

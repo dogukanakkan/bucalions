@@ -13,14 +13,13 @@ interface MembersSectionProps {
   members?: Member[];
 }
 
-// todo: remove mock functionality
 const defaultMembers: Member[] = [
-  { id: "1", firstName: "Ahmet", lastName: "Yılmaz", role: "Başkan" },
-  { id: "2", firstName: "Fatma", lastName: "Kaya", role: "Başkan Yardımcısı" },
-  { id: "3", firstName: "Mehmet", lastName: "Demir", role: "Genel Sekreter" },
-  { id: "4", firstName: "Ayşe", lastName: "Çelik", role: "Sayman" },
-  { id: "5", firstName: "Mustafa", lastName: "Şahin", role: "Yönetim Kurulu Üyesi" },
-  { id: "6", firstName: "Zeynep", lastName: "Öztürk", role: "Yönetim Kurulu Üyesi" },
+  { id: "1", firstName: "Ahmet", lastName: "Yılmaz", role: "Kulüp Başkanı" },
+  { id: "2", firstName: "Fatma", lastName: "Kaya", role: "1. Başkan Yardımcısı" },
+  { id: "3", firstName: "Mehmet", lastName: "Demir", role: "2. Başkan Yardımcısı" },
+  { id: "4", firstName: "Ayşe", lastName: "Çelik", role: "Genel Sekreter" },
+  { id: "5", firstName: "Mustafa", lastName: "Şahin", role: "Sayman" },
+  { id: "6", firstName: "Zeynep", lastName: "Öztürk", role: "Üyelik Koordinatörü" },
 ];
 
 export default function MembersSection({ members = defaultMembers }: MembersSectionProps) {
@@ -32,22 +31,22 @@ export default function MembersSection({ members = defaultMembers }: MembersSect
     <section id="uyeler" className="py-20 bg-muted/30">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4" data-testid="text-members-title">
+          <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-4" data-testid="text-members-title">
             Yönetim Kurulu
           </h2>
           <div className="w-20 h-1 bg-accent mx-auto rounded-full" />
           <p className="mt-4 text-muted-foreground max-w-2xl mx-auto">
-            Derneğimizin yönetim kurulu üyeleri
+            Buca Lions Club yönetim kurulu üyeleri
           </p>
         </div>
 
-        <Card className="max-w-4xl mx-auto">
+        <Card className="max-w-4xl mx-auto border-2 border-primary/20">
           <CardHeader className="flex flex-row items-center justify-between gap-4 pb-4">
             <div className="flex items-center gap-3">
               <div className="flex h-10 w-10 items-center justify-center rounded-md bg-primary">
                 <Users className="h-5 w-5 text-primary-foreground" />
               </div>
-              <CardTitle className="text-xl">Üyelerimiz</CardTitle>
+              <CardTitle className="text-xl text-primary">Üyelerimiz</CardTitle>
             </div>
           </CardHeader>
           <CardContent>
@@ -55,10 +54,10 @@ export default function MembersSection({ members = defaultMembers }: MembersSect
               {members.map((member) => (
                 <div
                   key={member.id}
-                  className="flex items-center gap-3 p-3 rounded-md bg-muted/50 hover-elevate"
+                  className="flex items-center gap-3 p-3 rounded-md bg-secondary/50 border border-accent/30 hover-elevate"
                   data-testid={`card-member-${member.id}`}
                 >
-                  <Avatar className="h-12 w-12 border-2 border-primary/20">
+                  <Avatar className="h-12 w-12 border-2 border-accent">
                     <AvatarFallback className="bg-primary text-primary-foreground font-semibold">
                       {getInitials(member.firstName, member.lastName)}
                     </AvatarFallback>
