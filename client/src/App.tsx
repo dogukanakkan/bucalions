@@ -12,9 +12,7 @@ function Router() {
 
   return (
     <Switch>
-      <Route path="/">
-        <HomePage onAdminClick={() => setLocation("/admin")} />
-      </Route>
+      <Route path="/" component={HomePage} />
       <Route path="/admin">
         <AdminPage onBack={() => setLocation("/")} />
       </Route>

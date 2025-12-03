@@ -4,10 +4,9 @@ import { Menu, X, Users } from "lucide-react";
 
 interface HeaderProps {
   organizationName?: string;
-  onAdminClick?: () => void;
 }
 
-export default function Header({ organizationName = "STK", onAdminClick }: HeaderProps) {
+export default function Header({ organizationName = "STK" }: HeaderProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navLinks = [
@@ -49,15 +48,6 @@ export default function Header({ organizationName = "STK", onAdminClick }: Heade
                 {link.label}
               </button>
             ))}
-            <Button
-              variant="default"
-              size="sm"
-              onClick={onAdminClick}
-              className="ml-2"
-              data-testid="button-admin-login"
-            >
-              Yönetim
-            </Button>
           </nav>
 
           <Button
@@ -84,15 +74,6 @@ export default function Header({ organizationName = "STK", onAdminClick }: Heade
                   {link.label}
                 </button>
               ))}
-              <Button
-                variant="default"
-                size="sm"
-                onClick={onAdminClick}
-                className="mt-2"
-                data-testid="button-admin-login-mobile"
-              >
-                Yönetim
-              </Button>
             </nav>
           </div>
         )}

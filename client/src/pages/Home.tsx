@@ -6,17 +6,13 @@ import EventsSection from "@/components/EventsSection";
 import RegistrationForm from "@/components/RegistrationForm";
 import Footer from "@/components/Footer";
 
-interface HomePageProps {
-  onAdminClick?: () => void;
-}
-
-export default function HomePage({ onAdminClick }: HomePageProps) {
+export default function HomePage() {
   // todo: remove mock functionality - replace with real data from API
   const organizationName = "Toplum Gönüllüleri Derneği";
 
   return (
     <div className="min-h-screen bg-background">
-      <Header organizationName={organizationName} onAdminClick={onAdminClick} />
+      <Header organizationName={organizationName} />
       <main>
         <HeroSection />
         <AboutSection />
