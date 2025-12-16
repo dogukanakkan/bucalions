@@ -14,12 +14,26 @@ interface MembersSectionProps {
 }
 
 const defaultMembers: Member[] = [
-  { id: "1", firstName: "Ahmet", lastName: "Yılmaz", role: "Kulüp Başkanı" },
-  { id: "2", firstName: "Fatma", lastName: "Kaya", role: "1. Başkan Yardımcısı" },
-  { id: "3", firstName: "Mehmet", lastName: "Demir", role: "2. Başkan Yardımcısı" },
-  { id: "4", firstName: "Ayşe", lastName: "Çelik", role: "Genel Sekreter" },
-  { id: "5", firstName: "Mustafa", lastName: "Şahin", role: "Sayman" },
-  { id: "6", firstName: "Zeynep", lastName: "Öztürk", role: "Üyelik Koordinatörü" },
+  { id: "1", firstName: "Havzullah", lastName: "Çelebi", role: "Kulüp Başkanı" },
+  { id: "2", firstName: "Fuat", lastName: "Orsan", role: "Başkan Yardımcısı" },
+  { id: "3", firstName: "Fatih", lastName: "Uzun", role: "Sekreter" },
+  { id: "4", firstName: "Hürriyet", lastName: "Tulunay", role: "Sayman" },
+  { id: "5", firstName: "Necdet", lastName: "Akman", role: "Üye" },
+  { id: "6", firstName: "Gülşen", lastName: "Akman", role: "Üye" },
+  { id: "7", firstName: "Tuncay", lastName: "Uncu", role: "Üye" },
+  { id: "8", firstName: "Nural", lastName: "Budin", role: "Üye" },
+  { id: "9", firstName: "Mihriban", lastName: "Aki", role: "Üye" },
+  { id: "10", firstName: "Hülya", lastName: "Arman", role: "Üye" },
+  { id: "11", firstName: "Deniz", lastName: "Atasever", role: "Üye" },
+  { id: "12", firstName: "Rıdvan", lastName: "Bayraktar", role: "Üye" },
+  { id: "13", firstName: "Ahmet Rıdvan", lastName: "Tulunay", role: "Üye" },
+  { id: "14", firstName: "Üstün", lastName: "Soydan", role: "Üye" },
+  { id: "5", firstName: "Fuat Selen", lastName: "Orsan", role: "Üye" },
+  { id: "6", firstName: "Abidin", lastName: "Kaleci", role: "Üye" },
+  { id: "5", firstName: "İnci", lastName: "İmal", role: "Üye" },
+  { id: "6", firstName: "Cumhur", lastName: "Elçi", role: "Üye" },
+  { id: "5", firstName: "Serdarcan", lastName: "Boylu", role: "Üye" },
+  { id: "6", firstName: "Pırıl", lastName: "Bilger Özkaranfil", role: "Üye" },
 ];
 
 export default function MembersSection({ members = defaultMembers }: MembersSectionProps) {

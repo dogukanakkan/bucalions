@@ -7,9 +7,9 @@ interface AboutSectionProps {
 }
 
 export default function AboutSection({
-  content = "Buca Lions Club, Lions Clubs International'ın bir parçası olarak 1917'den bu yana dünya genelinde sürdürülen hizmet geleneğini Buca'da temsil etmektedir. Görme sağlığından açlıkla mücadeleye, çevre korumadan diyabet farkındalığına kadar birçok alanda topluma hizmet ediyoruz.",
-  mission = "Gönüllü üyelerimizle birlikte toplumun ihtiyaçlarına cevap vermek, yerel ve küresel ölçekte insani yardım projelerini hayata geçirmek.",
-  vision = "Herkesin birbirine yardım ettiği, dayanışmanın güçlü olduğu bir toplum. We Serve - Hizmet Ediyoruz!",
+  content = "İzmir Buca Lions Kulübü 30 Ocak 1987 yılında kurulmuştur. Çeşitli saygın üyeleri ile devam etmekte olan kulübün amacı We Serve yani Hizmet Ediyoruz bilincini benimsemektir. 1987 yılından günümüze Çeşitli hizmetler sunmuş ve adını duyurmuştur. Kulüp dinamiğini aile olmak kavramından almış ve bugüne denk bu kavram ile yürütmektedir. Kulüp içerisinde benimsenen etik kurallar her zaman uygulanmakta olup Atatürk'ün ilkeleri doğrultusunda yol almaktadır. LİONS, Özgürlük, Anlayış ve  Ulusumuzun Güvenliğini benimser. Bizlerde bu yolda hizmet etmeye devam edeceğiz.",
+  mission = "Buca Lions Kulübü olarak vizyonumuz; dayanışmanın, gönüllülüğün ve toplumsal sorumluluğun güçlendiği, herkesin fırsat eşitliğine erişebildiği bir gelecek yaratmaktır.",
+  vision = "Buca Lions Kulübü olarak misyonumuz;eğitim, sağlık, çevre ve sosyal destek alanlarında kalıcı, sürdürülebilir ve etkili projeler üretmek; toplumun her kesimine ulaşan hizmetler sunmaktır. İhtiyaç sahibi bireylerin yaşam kalitesini artırmayı, çocukların ve gençlerin gelişimini desteklemeyi ve toplumda farkındalık yaratan çalışmalar yürütmeyi görev biliriz. Tüm faaliyetlerimizde Lions etik değerlerine bağlı kalarak şeffaflık, güven ve sorumluluk ilkeleriyle hareket ederiz. Yerel sorunlara duyarlı, küresel değerlere açık bir bakış açısıyla hem Buca’ya hem de ülkemize katkı sağlamayı hedefleriz. Gönüllülüğün dönüştürücü gücüne inanır, birlikte atılan her adımın daha güçlü bir toplum yaratacağına yürekten bağlanırız. Bu doğrultuda, her projede iyilik, hizmet ve insan odaklı bir yaklaşım sergileyerek topluma ışık olmayı sürdürüyoruz.",
 }: AboutSectionProps) {
   return (
     <section id="hakkimizda" className="py-20 bg-background">
