@@ -1,0 +1,15 @@
+[33mcommit 6e7ae9a7f79dcf71a2a6d9e374af0265904b5779[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: dogukanakkan <dogukanakkan3@gmail.com>
+Date:   Thu Dec 18 15:39:27 2025 +0300
+
+    Trigger Cloudflare rebuild
+
+[33mcommit 1df21317095e92e2e84b5c0227b530d3c8dfe569[m
+Author: dogukanakkan <dogukanakkan3@gmail.com>
+Date:   Tue Dec 16 18:03:02 2025 +0300
+
+    Update about, members and favicon
+
+client/public/favicon.png
+client/src/components/AboutSection.tsx
+client/src/components/MembersSection.tsx

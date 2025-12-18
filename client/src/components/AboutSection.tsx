@@ -58,7 +58,7 @@ export default function AboutSection({
           <div className="mt-8 bg-primary/10 border-2 border-primary/30 rounded-md p-6 text-center">
             <div className="flex items-center justify-center gap-3 mb-3">
               <Users className="h-6 w-6 text-primary" />
-              <span className="text-2xl font-bold text-primary">50+</span>
+              <span className="text-2xl font-bold text-primary">20</span>
             </div>
             <p className="text-muted-foreground">Aktif Üye</p>
           </div>
